@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
 
   root to: "home#index"
+  resources :autos, only: %i[index]
 
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
@@ -15,4 +16,5 @@ Rails.application.routes.draw do
     sessions: 'users/sessions',
     registrations: 'users/registrations'
   }
+
 end
