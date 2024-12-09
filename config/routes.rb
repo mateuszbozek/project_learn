@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     registration: 'signup'
   },
   controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
+    sessions: 'sessions',
+    registrations: 'registrations'
   }
 
 end
