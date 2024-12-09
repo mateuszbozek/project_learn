@@ -320,4 +320,8 @@ Devise.setup do |config|
     ]
     jwt.expiration_time = 60.minutes.to_i
   end
+
+  config.warden do |manager|
+    manager.scope_defaults :user, store: false
+  end
 end
