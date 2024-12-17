@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   root to: "home#index"
   resources :autos, only: %i[index]
+  get 'calculate_prime_numebrs', to: "calculator#prime_numbers"
 
   devise_for :users, path: '', path_names: {
     sign_in: 'login',
