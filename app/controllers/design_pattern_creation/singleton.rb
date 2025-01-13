@@ -1,4 +1,4 @@
-class DesignPattern::Singleton
+class DesignPatternCreation::Singleton
     
   attr_reader :value
 
