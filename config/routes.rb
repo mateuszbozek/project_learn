@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
 
   root to: "home#index"
-  resources :autos, only: %i[index]
+  resources :autos, only: %i[index create]
   get 'calculate_prime_numebrs', to: "calculator#prime_numbers"
 
   devise_for :users, path: '', path_names: {

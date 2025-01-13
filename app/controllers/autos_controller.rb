@@ -6,4 +6,13 @@ class AutosController < ApplicationController
     render json: autos
   end
 
+  def create
+    AutoService.new(create_params).call
+  end
+
+  private
+
+  def create_params
+    params.require(:auto).permit(:name)
+  end
 end
