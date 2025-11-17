@@ -1,18 +1,15 @@
 class AutosController < ApplicationController
-
-  def index
-    byebug
-    autos = Auto.all
-    render json: autos
-  end
-
-  def create
-    AutoService.new(create_params).call
-  end
-
-  private
-
-  def create_params
-    params.require(:auto).permit(:name)
+  def self.test(value)
+    (0..value).each do |number|
+      if number%15 == 0
+        p "#{number} podzielne przez 3 oraz 5"
+      elsif number%3 == 0
+        p "#{number} podzielne przez 3"
+      elsif number%5 == 0
+        p "#{number} podzielne przez 5"
+      else
+        p "#{number} nie podzielne ani przez 3 ani przez 5"
+      end
+    end
   end
 end
